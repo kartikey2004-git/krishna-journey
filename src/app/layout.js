@@ -1,7 +1,5 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Manrope } from "next/font/google";
 import "./globals.css";
-
-
 
 const geist = Geist({
   subsets: ["latin"],
@@ -23,9 +21,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+    <html 
+    lang="en" 
+    className={`${geist.variable} ${manrope.variable} antialiased`}>
+      <body className="min-h-screen bg-background text-foreground"
       >
         {children}
       </body>
